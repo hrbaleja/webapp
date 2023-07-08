@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Grid, TextField, Button,  IconButton, Card, CardMedia } from '@mui/material';
+import { Box, Typography, Grid, TextField, Button, IconButton, Card } from '@mui/material';
 import { FiFacebook, FiTwitter, FiInstagram } from 'react-icons/fi';
 
 const ContactUsSection = () => {
@@ -15,7 +15,34 @@ const ContactUsSection = () => {
       </Typography>
       <Grid container spacing={3} justifyContent="center">
         <Grid item xs={12} md={6}>
-          <Card sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 2 }}>
+          <Card sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 2, height: '100%' }}>
+            <Typography variant="h6" gutterBottom>
+              Contact Information
+            </Typography>
+            <Typography variant="body2" align="center" gutterBottom>
+              123 Main Street, City, Country
+            </Typography>
+            <Typography variant="body2" align="center" gutterBottom>
+              Phone: 123-456-7890
+            </Typography>
+            <Typography variant="body2" align="center" gutterBottom>
+              Email: info@example.com
+            </Typography>
+            <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 2 }}>
+              <IconButton href="#" target="_blank" rel="noopener" color="inherit">
+                <FiFacebook />
+              </IconButton>
+              <IconButton href="#" target="_blank" rel="noopener" color="inherit">
+                <FiTwitter />
+              </IconButton>
+              <IconButton href="#" target="_blank" rel="noopener" color="inherit">
+                <FiInstagram />
+              </IconButton>
+            </Box>
+          </Card>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Card sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 2, height: '100%' }}>
             <Typography variant="h6" gutterBottom>
               Get in Touch
             </Typography>
@@ -49,44 +76,7 @@ const ContactUsSection = () => {
             </form>
           </Card>
         </Grid>
-        <Grid item xs={12} md={6}>
-          <Card sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 2 }}>
-            <Typography variant="h6" gutterBottom>
-              Contact Information
-            </Typography>
-            <Typography variant="body2" align="center" gutterBottom>
-              123 Main Street, City, Country
-            </Typography>
-            <Typography variant="body2" align="center" gutterBottom>
-              Phone: 123-456-7890
-            </Typography>
-            <Typography variant="body2" align="center" gutterBottom>
-              Email: info@example.com
-            </Typography>
-            <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 2 }}>
-              <IconButton href="#" target="_blank" rel="noopener" color="inherit">
-                <FiFacebook />
-              </IconButton>
-              <IconButton href="#" target="_blank" rel="noopener" color="inherit">
-                <FiTwitter />
-              </IconButton>
-              <IconButton href="#" target="_blank" rel="noopener" color="inherit">
-                <FiInstagram />
-              </IconButton>
-            </Box>
-          </Card>
-        </Grid>
       </Grid>
-      {/* Add the Google Maps component or embed your custom map here */}
-      <Box sx={{ mt: 4 }}>
-        <Card>
-          <CardMedia
-            sx={{ height: 400 }}
-            image="https://maps.googleapis.com/maps/api/staticmap?center=your_location&zoom=13&size=600x400&key=YOUR_API_KEY"
-            title="Company Location"
-          />
-        </Card>
-      </Box>
     </Box>
   );
 };

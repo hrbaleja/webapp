@@ -1,30 +1,34 @@
 import React from 'react';
+import { Box } from '@mui/material';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Components/Header';
-import Footer from './Components/Footer'; 
-import { CustomThemeProvider  } from './Components/ThemeContext'; 
-import HeroSection from './Components/HeroSection';
-import ServicesSection from './Components/ServicesSection';
-import SolutionsSection from './Components/SolutionsSection';
-import ProductsSection from './Components/ProductsSection';
-import AboutUsSection from './Components/AboutUsSection';
-import TestimonialsSection from './Components/TestimonialsSection';
-import ContactUsSection from './Components/ContactUsSection';
-
+import Footer from './Components/Footer';
+import { CustomThemeProvider } from './Components/ThemeContext';
+import Home from './Components/Home';
+import Services from './Components/Services';
+import Portfolio from './Components/Portfolio';
+import About from './Components/About';
+import Contact from './Components/Contact';
+import LoginForm from './Components/LoginForm';
 
 const App = () => {
   return (
-    
-    <CustomThemeProvider>
-      <Header />
-     <HeroSection></HeroSection>
-      <ServicesSection></ServicesSection>
-      <SolutionsSection></SolutionsSection>
-      <ProductsSection></ProductsSection>
-      <AboutUsSection></AboutUsSection>
-      <TestimonialsSection></TestimonialsSection>
-      <ContactUsSection></ContactUsSection>
-      <Footer />
-    </CustomThemeProvider>
+    <Router>
+      <Box sx={{ padding: '0 4px' }}>
+        <CustomThemeProvider>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+          <Footer />
+          {/* <LoginForm /> */}
+        </CustomThemeProvider>
+      </Box>
+    </Router>
   );
 };
 
