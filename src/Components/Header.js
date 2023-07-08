@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { AppBar, Toolbar, Typography, Button, IconButton, Box, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, IconButton, Box, Drawer, List, ListItem, ListItemText, Grid } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { FiSun, FiMoon } from 'react-icons/fi';
 import { Link, useLocation } from 'react-router-dom';
@@ -39,44 +39,59 @@ export default function MyAppBar() {
   );
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{
+      background: 'rgba(255, 255, 255, 0.2)',
+      boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
+      backdropFilter: 'blur(0px)',
+      webkitBackdropFilter: 'blur(0px)',
+      borderRadius: '10px',
+      border: '1px solid rgba(255, 255, 255, 0.18)',
+      color:'#000000'
+    }}>
       <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontWeight: 'bold' }}>
           My App
         </Typography>
 
         {/* Responsive Menu Button */}
         <Box sx={{ display: { xs: 'block', md: 'none' } }}>
-          <IconButton size="large" edge="start" color="inherit" aria-label="menu" onClick={toggleMenu}>
+          <IconButton size="large" edge="start" color="inherit" aria-label="menu" onClick={toggleMenu} sx={{ fontWeight: 'bold' }}>
             <MenuIcon />
           </IconButton>
         </Box>
 
-
-        {/* Desktop Menu Items */}
+        {/* Menu Items */}
         <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-          {menuItems.map((item, index) => (
-            <Button
-              key={index}
-              color="inherit"
-              component={Link}
-              to={item.link}
-              selected={item.link === location.pathname}
-            >
-              {item.text}
-            </Button>
-          ))}
+          <Grid container alignItems="center" spacing={2}>
+            <Grid item>
+              {menuItems.map((item, index) => (
+                <Button
+                  key={index}
+                  color="inherit"
+                  component={Link}
+                  to={item.link}
+                  selected={item.link === location.pathname}
+                  sx={{
+                    color: item.link === location.pathname ? 'rgba(6, 106, 137, 0.55 )' : 'inherit',
+                    fontWeight: 'bold',
+                  }}
+                >
+                  {item.text}
+                </Button>
+              ))}
+            </Grid>
+            <Grid item>
+              <IconButton color="inherit" onClick={toggleDarkMode}>
+                {darkMode ? <FiSun /> : <FiMoon />}
+              </IconButton>
+            </Grid>
+            <Grid item>
+              <IconButton color="inherit" onClick={toggleLogin}>
+                {loggedIn ? <LogoutIcon /> : <AccountCircleIcon />}
+              </IconButton>
+            </Grid>
+          </Grid>
         </Box>
-        
-        {/* Light/Dark Mode Toggle */}
-        <IconButton color="inherit" onClick={toggleDarkMode}>
-          {darkMode ? <FiSun /> : <FiMoon />}
-        </IconButton>
-
-        {/* Login/Logout Button */}
-        <IconButton color="inherit" onClick={toggleLogin}>
-          {loggedIn ? <LogoutIcon /> : <AccountCircleIcon />}
-        </IconButton>
 
         {/* Responsive Menu Items */}
         <Drawer

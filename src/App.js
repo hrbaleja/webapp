@@ -25,7 +25,7 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />
-          {/* <LoginForm /> */}
+          <LoginForm />
         </CustomThemeProvider>
       </Box>
     </Router>

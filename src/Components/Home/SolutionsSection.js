@@ -1,10 +1,12 @@
 import React from 'react';
-import { Box, Typography, Button, Grid, Card, CardContent, CardMedia } from '@mui/material';
+import { Box, Typography, Button, Grid, Card, CardContent, CardMedia,useTheme } from '@mui/material';
 import LaptopIcon from '@mui/icons-material/Laptop';
 import CloudIcon from '@mui/icons-material/Cloud';
 import SecurityIcon from '@mui/icons-material/Security';
 
 const SolutionsSection = () => {
+  const theme = useTheme();
+
   const solutions = [
     {
       title: 'Web Development',
@@ -33,7 +35,14 @@ const SolutionsSection = () => {
       <Grid container spacing={3} justifyContent="center">
         {solutions.map((solution, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card sx={{ height: '100%' }}>
+            <Card   sx={{
+                p: 3,
+                height: '100%',
+                border: '1px solid #e0e0e0',
+                borderRadius: '4px',
+                backgroundColor: theme.palette.background.default,
+                color: theme.palette.text.primary,
+              }}>
               <CardMedia
                 sx={{ height: 200 }}
                 image={`https://source.unsplash.com/400x300/?${solution.title}`}
