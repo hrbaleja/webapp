@@ -3,15 +3,22 @@ import { AppBar, Toolbar, Typography, Button, IconButton, Box,  Drawer, List, Li
 import MenuIcon from '@mui/icons-material/Menu';
 import { FiSun, FiMoon } from 'react-icons/fi';
 import { ThemeContext } from './ThemeContext'; 
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 export default function MyAppBar() {
-  const { darkMode, toggleDarkMode } = useContext(ThemeContext);
+  const { darkMode, toggleDarkMode, loggedIn, toggleLoggedIn } = useContext(ThemeContext);
   // const isSmallScreen = useMediaQuery('(max-width:600px)');
   const [drawerOpen, setDrawerOpen] = React.useState(false);
 
   const toggleMenu = () => {
     setDrawerOpen(!drawerOpen);
   };
+
+  const toggleLogin = () => {
+    toggleLoggedIn(!loggedIn);
+  };
+
 
   const menuItems = [
     { text: 'Home', link: '/' },
@@ -58,7 +65,10 @@ export default function MyAppBar() {
         <IconButton color="inherit" onClick={toggleDarkMode}>
           {darkMode ? <FiSun /> : <FiMoon />}
         </IconButton>
-
+  {/* Login/Logout Button */}
+  <IconButton color="inherit" onClick={toggleLogin}>
+          {loggedIn ? <LogoutIcon /> : <AccountCircleIcon />}
+        </IconButton>
         {/* Responsive Menu Items */}
         <Drawer
           anchor="right"
