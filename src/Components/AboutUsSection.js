@@ -11,17 +11,17 @@ const AboutUsSection = () => {
     {
       name: 'John Doe',
       position: 'CEO',
-      photo: 'https://source.unsplash.com/300x300/?person1',
+      photo: 'https://source.unsplash.com/300x300/?award',
     },
     {
       name: 'Jane Smith',
       position: 'CTO',
-      photo: 'https://source.unsplash.com/300x300/?person2',
+      photo: 'https://source.unsplash.com/300x300/?award',
     },
     {
       name: 'David Johnson',
       position: 'Lead Developer',
-      photo: 'https://source.unsplash.com/300x300/?person3',
+      photo: 'https://source.unsplash.com/300x300/?award',
     },
   ];
 

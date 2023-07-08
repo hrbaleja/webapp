@@ -7,19 +7,19 @@ const ProductsSection = () => {
       title: 'Product 1',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur eros a metus malesuada, sed mattis mauris tempor.',
       features: ['Feature 1', 'Feature 2', 'Feature 3'],
-      image: 'https://source.unsplash.com/400x300/?product1',
+      image: 'https://source.unsplash.com/400x300/?website',
     },
     {
       title: 'Product 2',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur eros a metus malesuada, sed mattis mauris tempor.',
       features: ['Feature 1', 'Feature 2', 'Feature 3'],
-      image: 'https://source.unsplash.com/400x300/?product2',
+      image: 'https://source.unsplash.com/400x300/?website',
     },
     {
       title: 'Product 3',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur eros a metus malesuada, sed mattis mauris tempor.',
       features: ['Feature 1', 'Feature 2', 'Feature 3'],
-      image: 'https://source.unsplash.com/400x300/?product3',
+      image: 'https://source.unsplash.com/400x300/?website',
     },
   ];
 

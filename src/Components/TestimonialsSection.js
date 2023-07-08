@@ -7,24 +7,35 @@ const TestimonialsSection = () => {
         name: 'John Doe',
         company: 'ABC Company',
         testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae dui sit amet tellus ultrices vestibulum et sed erat.',
-        logo: 'https://source.unsplash.com/100x100/?company1',
+        logo: 'https://source.unsplash.com/100x100/?face-man',
       },
       {
         name: 'Jane Smith',
         company: 'XYZ Corporation',
         testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae dui sit amet tellus ultrices vestibulum et sed erat.',
-        logo: 'https://source.unsplash.com/100x100/?company2',
+        logo: 'https://source.unsplash.com/100x100/?face-woman',
       },{
         name: 'John Doe',
         company: 'ABC Company',
         testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae dui sit amet tellus ultrices vestibulum et sed erat.',
-        logo: 'https://source.unsplash.com/100x100/?company1',
+        logo: 'https://source.unsplash.com/100x100/?face-man',
       },
       {
         name: 'Jane Smith',
         company: 'XYZ Corporation',
         testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae dui sit amet tellus ultrices vestibulum et sed erat.',
-        logo: 'https://source.unsplash.com/100x100/?company2',
+        logo: 'https://source.unsplash.com/100x100/?face-woman',
+      },{
+        name: 'John Doe',
+        company: 'ABC Company',
+        testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae dui sit amet tellus ultrices vestibulum et sed erat.',
+        logo: 'https://source.unsplash.com/100x100/?face-man',
+      },
+      {
+        name: 'Jane Smith',
+        company: 'XYZ Corporation',
+        testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae dui sit amet tellus ultrices vestibulum et sed erat.',
+        logo: 'https://source.unsplash.com/100x100/?face-woman',
       },
   ];
 
