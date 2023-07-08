@@ -5,6 +5,10 @@ import { CustomThemeProvider  } from './Components/ThemeContext';
 import HeroSection from './Components/HeroSection';
 import ServicesSection from './Components/ServicesSection';
 import SolutionsSection from './Components/SolutionsSection';
+import ProductsSection from './Components/ProductsSection';
+import AboutUsSection from './Components/AboutUsSection';
+import TestimonialsSection from './Components/TestimonialsSection';
+import ContactUsSection from './Components/ContactUsSection';
 
 
 const App = () => {
@@ -13,7 +17,12 @@ const App = () => {
     <CustomThemeProvider>
       <Header />
      <HeroSection></HeroSection>
-      <ServicesSection></ServicesSection><SolutionsSection></SolutionsSection>
+      <ServicesSection></ServicesSection>
+      <SolutionsSection></SolutionsSection>
+      <ProductsSection></ProductsSection>
+      <AboutUsSection></AboutUsSection>
+      <TestimonialsSection></TestimonialsSection>
+      <ContactUsSection></ContactUsSection>
       <Footer />
     </CustomThemeProvider>
   );

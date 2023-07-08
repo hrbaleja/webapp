@@ -23,16 +23,7 @@ const SolutionsSection = () => {
     },
   ];
 
-  const testimonials = [
-    {
-      name: 'John Doe',
-      testimonial: 'Their cloud computing services enabled us to scale our business operations seamlessly and reduce costs.',
-    },
-    {
-      name: 'Jane Smith',
-      testimonial: 'Their cloud computing services enabled us to scale our business operations seamlessly and reduce costs.',
-    },
-  ];
+  
 
   return (
     <Box sx={{ py: 6 }}>
@@ -58,33 +49,18 @@ const SolutionsSection = () => {
                 <Typography variant="body2" gutterBottom>
                   {solution.description}
                 </Typography>
+                <Box sx={{ mt: 4 }} align="left">
+        <Button variant="contained" color="primary">
+          Learn More
+        </Button>
+      </Box>
               </CardContent>
             </Card>
           </Grid>
         ))}
       </Grid>
-      <Box sx={{ mt: 4 }}>
-        <Typography variant="h5" component="h3" align="center" gutterBottom>
-          Testimonials
-        </Typography>
-        <Grid container spacing={3} justifyContent="center">
-          {testimonials.map((testimonial, index) => (
-            <Grid item xs={12} md={6} key={index}>
-              <Typography variant="body2" gutterBottom>
-                "{testimonial.testimonial}"
-              </Typography>
-              <Typography variant="subtitle1" component="p" align="right">
-                - {testimonial.name}
-              </Typography>
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
-      <Box sx={{ mt: 4 }} align="center">
-        <Button variant="contained" color="primary">
-          Learn More
-        </Button>
-      </Box>
+      
+     
     </Box>
   );
 };
