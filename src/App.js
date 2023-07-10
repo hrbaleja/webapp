@@ -10,11 +10,14 @@ import Portfolio from './Components/Portfolio';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import LoginForm from './Components/LoginForm';
+import bgui from './Ui7.jpg';
+
 
 const App = () => {
   return (
     <Router>
-      <Box sx={{ padding: '0 4px' }}>
+      <Box sx={{ padding: '0 4px', backgroundImage: `url(${bgui})`,  backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',}}>
         <CustomThemeProvider>
           <Header />
           <Routes>

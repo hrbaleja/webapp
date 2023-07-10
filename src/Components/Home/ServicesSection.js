@@ -37,7 +37,7 @@ const ServicesSection = () => {
                 border: '1px solid #e0e0e0',
                 borderRadius: '4px',
                 backgroundColor: theme.palette.background.default,
-                color: theme.palette.text.primary,
+                color: '#fff',
               }}
             >
               <Typography variant="h6" component="h3" gutterBottom>
